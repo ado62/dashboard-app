@@ -5,6 +5,9 @@ import DataTable from './components/DataTable'
 import MapView from './components/MapView'
 import LogPanel from './components/LogPanel'
 
+const API_BASE =
+  import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
+
 function App() {
   const [chartData, setChartData] = useState<ChartData[]>([])
   const [tableData, setTableData] = useState<TableResponse | null>(null)
@@ -16,12 +19,12 @@ function App() {
   useEffect(() => {
     async function load() {
       try {
-        const [chartRes, tableRes, locationRes, logRes] = await Promise.all([
-          fetch('http://127.0.0.1:8000/api/data/chart'),
-          fetch('http://127.0.0.1:8000/api/data/table'),
-          fetch('http://127.0.0.1:8000/api/data/locations'),
-          fetch('http://127.0.0.1:8000/api/logs'),
-        ])
+	const [chartRes, tableRes, locationRes, logRes] = await Promise.all([
+	  fetch(`${API_BASE}/api/data/chart`),
+	  fetch(`${API_BASE}/api/data/table`),
+	  fetch(`${API_BASE}/api/data/locations`),
+	  fetch(`${API_BASE}/api/logs`),
+	])
         if (!chartRes.ok || !tableRes.ok || !locationRes.ok || !logRes.ok) {
           throw new Error('Unable to load backend data')
         }
