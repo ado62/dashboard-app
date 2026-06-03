@@ -8,6 +8,9 @@ import LogPanel from './components/LogPanel'
 const API_BASE =
   import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000'
 
+console.log("VITE_API_URL =", import.meta.env.VITE_API_URL)
+console.log("API_BASE =", API_BASE)
+
 function App() {
   const [chartData, setChartData] = useState<ChartData[]>([])
   const [tableData, setTableData] = useState<TableResponse | null>(null)
