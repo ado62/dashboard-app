@@ -11,12 +11,18 @@ from .csv_data import load_data, load_logs
 
 app = FastAPI(title="CSV Dashboard API")
 
-origins = ["http://localhost:5173", "http://127.0.0.1:5173"]
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://dashboard-cl0jm71jd-ado62s-projects.vercel.app",
+    "https://dashboard-app-phi-beryl.vercel.app"
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
