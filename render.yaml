@@ -1,0 +1,17 @@
+name: CSV Dashboard Backend
+runtime: python-3.10
+
+build:
+  builder: docker
+  
+env:
+  - key: PYTHON_VERSION
+    value: 3.10
+
+services:
+  - type: web
+    name: csv-dashboard-api
+    dockerfile: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"

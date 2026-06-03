@@ -1,0 +1,7 @@
+timestamp,level,source,message
+2026-01-01T09:00:00Z,INFO,backend,Loaded sample data successfully
+2026-01-02T10:15:23Z,WARN,backend,Missing optional region value in row 12
+2026-01-03T12:41:10Z,INFO,backend,Chart series prepared for dashboard
+2026-01-04T14:03:55Z,ERROR,backend,Failed to parse float in sample row 5
+2026-01-05T16:30:00Z,INFO,backend,API health check completed
+2026-01-06T18:12:21Z,INFO,backend,Location points computed for map view

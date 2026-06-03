@@ -1,0 +1,11 @@
+date,category,region,value,latitude,longitude,note
+2026-01-01,Operations,North,1200,47.6062,-122.3321,Start-of-year review
+2026-01-02,Sales,West,950,34.0522,-118.2437,Client onboarding
+2026-01-03,Operations,East,530,40.7128,-74.0060,Workflow optimization
+2026-01-04,Marketing,South,780,29.7604,-95.3698,Campaign launch
+2026-01-05,Sales,North,1250,47.6062,-122.3321,Regional sale
+2026-01-06,Marketing,East,660,40.7128,-74.0060,Ad conversion spike
+2026-01-07,Operations,West,420,34.0522,-118.2437,Inventory check
+2026-01-08,Support,South,300,29.7604,-95.3698,Customer survey
+2026-01-09,Support,East,410,40.7128,-74.0060,Helpdesk ticket flow
+2026-01-10,Sales,South,1120,29.7604,-95.3698,Quarterly revenue
